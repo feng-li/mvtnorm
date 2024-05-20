@@ -385,7 +385,7 @@ static void gridcalc(struct GRID *g)
       - g->z[i-1] * g->q[i][1] + g->q[i][0];
     g->q[i][3] = - g->w2[i] * g->d[i]
       - g->z[i-1] * g->q[i][2] + 2.0 * g->q[i][1];
-    if (i == 1) Rprintf("");
+/*    if (i == 1) Rprintf(""); */
   }
 
   g->n = ngrd;
@@ -410,7 +410,7 @@ static int checkall(int *vector, int length, int value)
  *
  */
 
-SEXP C_miwa(SEXP steps, SEXP corr, SEXP upper, SEXP lower, SEXP infin)
+SEXP R_miwa(SEXP steps, SEXP corr, SEXP upper, SEXP lower, SEXP infin)
 {
     double r[MAXM][MAXM][MAXM], hv[MAXM][MAXM], d[MAXM][MAXM];
     struct GRID grid;
